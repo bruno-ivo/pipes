@@ -23,8 +23,11 @@ export class ExemplosPipesComponent implements OnInit {
   addCurso(valor: any){
     this.livros.push(valor);
     console.log(this.livros);
-
   }
+
+  valorAsync = new Promise((resolve, reject) => {
+    setTimeout(() =>  resolve('Valor assincrono'), 2000);
+  } );
 
   constructor() { }
 
